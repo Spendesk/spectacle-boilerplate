@@ -60,6 +60,7 @@ const images = {
   graphql: require("file!../assets/graphql.mov"),
   firstname: require("../assets/code/firstname.png"),
   fullname: require("../assets/code/fullname.png"),
+  hiring: require("../assets/hiring.gif"),
 };
 
 preloader(images);
@@ -208,16 +209,20 @@ export default class Presentation extends React.Component {
           </Slide>
           <Slide transition={["slide"]} bgColor="white" notes="buggy and slow, garnering one-star ratings in the App Store and crashing more often than it worked.">
             <Heading textColor={purple} bold={false} textSize="3.5rem" margin="0">Solution 1</Heading>
-            <Text>Full Web</Text>
+            <Appear><Text>Full Web</Text></Appear>
             <Layout>
-              <Fit>
-                <Image src={images.fbWeb.replace("/", "")} />
-              </Fit>
+              <Appear>
+                <Fit>
+                  <Image src={images.fbWeb.replace("/", "")} />
+                </Fit>
+              </Appear>
               <Fill>
-                <BlockQuote textColor="tertiary" bold={false} caps="none" textSize={2}>
-                  <Quote textSize={40} textWeight={300}><Purple style={{fontWeight: 500}}>It was probably one of the biggest mistakes we have ever made.</Purple></Quote>
-                  <Cite>Mark Zuckerberg</Cite>
-                </BlockQuote>
+                <Appear>
+                  <BlockQuote textColor="tertiary" bold={false} caps="none" textSize={2}>
+                    <Quote textSize={40} textWeight={300}><Purple style={{fontWeight: 500}}>It was probably one of the biggest mistakes we have ever made.</Purple></Quote>
+                    <Cite>Mark Zuckerberg</Cite>
+                  </BlockQuote>
+                </Appear>
               </Fill>
             </Layout>
           </Slide>
@@ -230,11 +235,11 @@ export default class Presentation extends React.Component {
           </Slide>
           <Slide transition={["slide"]} bgColor="white">
             <Heading textColor={black} bold={false} textSize="3.5rem" margin="0 0 30px">L'application <Purple>full native</Purple></Heading>
-            <Image src={images.fbNew.replace("/", "")} height={450} />
+            <Appear><Image src={images.fbNew.replace("/", "")} height={450} /></Appear>
           </Slide>
           <Slide transition={["slide"]} bgColor="white">
-            <Heading textColor={black} bold={false} textSize="3.5rem" margin="0 0 30px">Solution 2 - <Purple>React-Native</Purple></Heading>
-            <Image src={images.firework.replace("/", "")} width={300} margin="0 auto" />
+            <Heading textColor={black} bold={false} textSize="3.5rem" margin="0 0 30px">Solution 2 - <Appear fid="0"><Purple>React-Native</Purple></Appear></Heading>
+            <Appear fid="0"><Image src={images.firework.replace("/", "")} width={300} margin="0 auto" /></Appear>
             <List>
               <Appear><ListItem>Rapidité/agilité/flexibilité du web</ListItem></Appear>
               <Appear><ListItem>Un langage bridge</ListItem></Appear>
@@ -242,9 +247,9 @@ export default class Presentation extends React.Component {
           </Slide>
           <Slide bgColor="white">
             <Heading textColor={black} bold={false} textSize="3.5rem" margin="0 0 30px"><Purple>React-Native</Purple> en 2017</Heading>
-            <Image src={images.appRn.replace("/", "")} width={400} /><br/>
-            <Link href="https://facebook.github.io/react-native/showcase.html" textSize={20}>https://facebook.github.io/react-native/showcase.html</Link>
-            <Text><i className="fa fa-github"/> 42832 <i className="fa fa-star"/></Text>
+            <Appear><Image src={images.appRn.replace("/", "")} width={400} /><br/>
+            <Link href="https://facebook.github.io/react-native/showcase.html" textSize={20}>https://facebook.github.io/react-native/showcase.html</Link></Appear>
+            <Appear><Text><i className="fa fa-github"/> 42832 <i className="fa fa-star"/></Text></Appear>
           </Slide>
           <Slide transition={["slide"]} bgColor="white">
             <Heading textColor={black} bold={false} fit>En pratique <Purple>construisons une Todo List</Purple></Heading>
@@ -258,32 +263,38 @@ export default class Presentation extends React.Component {
           </Slide>
           <Slide transition={["slide"]} bgColor="white">
             <Heading textColor={black} bold={false} textSize="3.5rem" margin="0 0 30px"><Purple>GraphQL</Purple>: A query language for your API</Heading>
-            <video src={images.graphql.replace("/", "")} height={450} autoPlay={true} loop={true} />
+            <Appear><video src={images.graphql.replace("/", "")} height={450} autoPlay={true} loop={true} /></Appear>
           </Slide>
           <Slide transition={["slide"]} bgColor="white">
             <Heading textColor={black} bold={false} textSize="2.5rem" margin="0 0 30px"><Purple>Relay</Purple>: A JavaScript framework for building data-driven react applications</Heading>
             <Layout>
               <Fill style={{marginRight: 10}}>
-                <Image src={images.firstname.replace("/", "")} margin="0 auto" width={365} />
-                <CodePane
+                <Appear><Image src={images.firstname.replace("/", "")} margin="0 auto" width={365} /></Appear>
+                <Appear><CodePane
                   lang="jsx"
                   source={require("raw-loader!../assets/code/fragment_firstName.example")}
                   margin="20px auto"
-                />
+                /></Appear>
               </Fill>
               <Fill style={{marginLeft: 10}}>
-                <Image src={images.fullname.replace("/", "")} margin="0 auto" width={365} />
-                <CodePane
+                <Appear><Image src={images.fullname.replace("/", "")} margin="0 auto" width={365} /></Appear>
+                <Appear><CodePane
                   lang="jsx"
                   source={require("raw-loader!../assets/code/fragment_fullname.example")}
                   margin="20px auto"
-                />
+                /></Appear>
               </Fill>
             </Layout>
           </Slide>
           <Slide transition={["slide"]} bgColor="white">
-            <Heading textColor="#bbb" bold={false} margin="0 0 30px 0">Questions ?</Heading>
+            <Heading textColor={black} bold={false} margin="0 0 30px 0">Questions <Purple>?</Purple></Heading>
             <Image src={images.questions.replace("/", "")} style={{ width: '500px' }} />
+            <Link href="https://spendesk.github.io/hipster-2018/">https://spendesk.github.io/hipster-2018/</Link>
+          </Slide>
+          <Slide transition={["slide"]} bgColor="white">
+            <Heading textColor={black} bold={false} margin="0 0 30px 0">On <Purple>recrute</Purple>!</Heading>
+            <Image src={images.hiring.replace("/", "")} width={480} margin="0 auto" /><br/>
+            Contact: <Link href="mailto:arnaud@spendesk.com"><Purple>arnaud@spendesk.com</Purple></Link>
           </Slide>
         </Deck>
       </Spectacle>
