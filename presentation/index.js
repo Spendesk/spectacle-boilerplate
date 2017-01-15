@@ -58,6 +58,8 @@ const images = {
   appRn: require("../assets/app_rn.png"),
   spendeskMobile: require("../assets/spendesk_mobile.png"),
   graphql: require("file!../assets/graphql.mov"),
+  firstname: require("../assets/code/firstname.png"),
+  fullname: require("../assets/code/fullname.png"),
 };
 
 preloader(images);
@@ -137,8 +139,8 @@ export default class Presentation extends React.Component {
         <Deck transition={["zoom", "slide"]} transitionDuration={500} controls={false} progress="bar">
           <Slide transition={["slide"]} bgColor="white">
             <Heading fit bold={false} textColor={black}>
-                Comment être un <Purple>hipster</Purple> en 2018<br/>
-              feat. <Purple id="typedHome" />
+              Comment être un dev <Purple>hipster</Purple><br/>
+              en 2018 feat. <Purple id="typedHome" />
             </Heading>
           </Slide>
           <Slide transition={["slide"]} bgColor="white">
@@ -259,78 +261,29 @@ export default class Presentation extends React.Component {
             <video src={images.graphql.replace("/", "")} height={450} autoPlay={true} loop={true} />
           </Slide>
           <Slide transition={["slide"]} bgColor="white">
-            <Heading textColor={black} bold={false} textSize="3.5rem" margin="0 0 30px"><Purple>GraphQL</Purple>: A query language for your API</Heading>
-            <video src={images.graphql.replace("/", "")} height={450} autoPlay={true} loop={true} />
+            <Heading textColor={black} bold={false} textSize="2.5rem" margin="0 0 30px"><Purple>Relay</Purple>: A JavaScript framework for building data-driven react applications</Heading>
+            <Layout>
+              <Fill style={{marginRight: 10}}>
+                <Image src={images.firstname.replace("/", "")} margin="0 auto" width={365} />
+                <CodePane
+                  lang="jsx"
+                  source={require("raw-loader!../assets/code/fragment_firstName.example")}
+                  margin="20px auto"
+                />
+              </Fill>
+              <Fill style={{marginLeft: 10}}>
+                <Image src={images.fullname.replace("/", "")} margin="0 auto" width={365} />
+                <CodePane
+                  lang="jsx"
+                  source={require("raw-loader!../assets/code/fragment_fullname.example")}
+                  margin="20px auto"
+                />
+              </Fill>
+            </Layout>
           </Slide>
           <Slide transition={["slide"]} bgColor="white">
             <Heading textColor="#bbb" bold={false} margin="0 0 30px 0">Questions ?</Heading>
             <Image src={images.questions.replace("/", "")} style={{ width: '500px' }} />
-          </Slide>
-          <Slide transition={["zoom", "fade"]} bgColor="primary">
-            <Heading caps fit>Flexible Layouts</Heading>
-            <Layout>
-              <Fill>
-                <Heading size={4} caps textColor="secondary" bgColor="white" margin={10}>
-                  Left
-                </Heading>
-              </Fill>
-              <Fill>
-                <Heading size={4} caps textColor="secondary" bgColor="white" margin={10}>
-                  Right
-                </Heading>
-              </Fill>
-            </Layout>
-          </Slide>
-          <Slide transition={["slide"]} bgColor="black">
-            <BlockQuote>
-              <Quote>Wonderfully formatted quotes</Quote>
-              <Cite>Ken Wheeler</Cite>
-            </BlockQuote>
-          </Slide>
-          <Slide transition={["spin", "zoom"]} bgColor="tertiary">
-            <Heading caps fit size={1} textColor="primary">
-              Inline Markdown
-            </Heading>
-            <Markdown>
-              {`
-![Markdown Logo](${images.markdown.replace("/", "")})
-
-You can write inline images, [Markdown Links](http://commonmark.org), paragraph text and most other markdown syntax
-* Lists too!
-* With ~~strikethrough~~ and _italic_
-* And lets not forget **bold**
-              `}
-            </Markdown>
-          </Slide>
-          <Slide transition={["slide", "spin"]} bgColor="primary">
-            <Heading caps fit size={1} textColor="tertiary">
-              Smooth
-            </Heading>
-            <Heading caps fit size={1} textColor="secondary">
-              Combinable Transitions
-            </Heading>
-          </Slide>
-          <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
-            <List>
-              <Appear><ListItem>Inline style based theme system</ListItem></Appear>
-              <Appear><ListItem>Autofit text</ListItem></Appear>
-              <Appear><ListItem>Flexbox layout system</ListItem></Appear>
-              <Appear><ListItem>React-Router navigation</ListItem></Appear>
-              <Appear><ListItem>PDF export</ListItem></Appear>
-              <Appear><ListItem>And...</ListItem></Appear>
-            </List>
-          </Slide>
-          <Slide transition={["slide"]} bgColor="primary">
-            <Heading size={1} caps fit textColor="tertiary">
-              Your presentations are interactive
-            </Heading>
-            <Interactive/>
-          </Slide>
-          <Slide transition={["spin", "slide"]} bgColor="tertiary">
-            <Heading size={1} caps fit lineHeight={1.5} textColor="primary">
-              Made with love in Seattle by
-            </Heading>
-            <Link href="http://www.formidablelabs.com"><Image width="100%" src={images.logo}/></Link>
           </Slide>
         </Deck>
       </Spectacle>

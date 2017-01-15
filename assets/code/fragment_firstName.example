@@ -1,0 +1,22 @@
+return (
+  {
+    return Relay.QL`
+      fragment on Request {
+        description
+        ...
+        requester {
+          first_name
+          ...
+        }
+        ...
+      }
+    `;
+  }
+
+
+  renderName() {
+    <Text>
+      {requester.first_name}
+    </Text>
+  }
+);
