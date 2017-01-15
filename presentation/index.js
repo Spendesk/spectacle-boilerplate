@@ -247,8 +247,12 @@ export default class Presentation extends React.Component {
           </Slide>
           <Slide bgColor="white">
             <Heading textColor={black} bold={false} textSize="3.5rem" margin="0 0 30px"><Purple>React-Native</Purple> en 2017</Heading>
-            <Appear><Image src={images.appRn.replace("/", "")} width={400} /><br/>
-            <Link href="https://facebook.github.io/react-native/showcase.html" textSize={20}>https://facebook.github.io/react-native/showcase.html</Link></Appear>
+            <Appear>
+              <div>
+                <Image src={images.appRn.replace("/", "")} width={400} /><br/>
+                <Link href="https://facebook.github.io/react-native/showcase.html" textSize={20}>https://facebook.github.io/react-native/showcase.html</Link>
+              </div>
+            </Appear>
             <Appear><Text><i className="fa fa-github"/> 42832 <i className="fa fa-star"/></Text></Appear>
           </Slide>
           <Slide transition={["slide"]} bgColor="white">
