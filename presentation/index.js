@@ -146,7 +146,7 @@ export default class Presentation extends React.Component {
               <Appear fid="0">
                 <Fill>
                   <Image bgImage={images.flg.replace("/", "")} style={Styles.avatar}/>
-                  <Image src={images.efounders.replace("/", "")} style={Styles.logos}  />
+                  <Image src={images.efounders} style={Styles.logos}  />
                   <List style={Styles.list}>
                     <ListItem textColor="tertiary" className="u-tc">
                       <Link href="https://www.linkedin.com/in/fannylegallou" target="_blank" style={{fontSize: '0.8em'}}>
@@ -159,7 +159,7 @@ export default class Presentation extends React.Component {
               <Appear fid="1">
                 <Fill>
                   <Image bgImage={images.ababol.replace("/", "")} style={Styles.avatar}/>
-                  <Image src={images.spendesk.replace("/", "")} style={Styles.logos}  />
+                  <Image src={images.spendesk} style={Styles.logos}  />
                   <List style={Styles.list}>
                     <ListItem textColor="tertiary" className="u-tc">
                       <Link href="https://github.com/ababol" target="_blank" style={{fontSize: '0.8em'}}>
@@ -172,7 +172,7 @@ export default class Presentation extends React.Component {
               <Appear fid="2">
                 <Fill>
                   <Image bgImage={images.ilyes.replace("/", "")} style={Styles.avatar}/>
-                  <Image src={images.spendesk.replace("/", "")} style={Styles.logos} />
+                  <Image src={images.spendesk} style={Styles.logos} />
                   <List style={Styles.list} className="u-tc">
                     <ListItem textColor="tertiary">
                       <Link href="https://github.com/ilyes" target="_blank" style={{fontSize: '0.8em'}}>
@@ -264,7 +264,7 @@ export default class Presentation extends React.Component {
           </Slide>
           <Slide transition={["slide"]} bgColor="white">
             <Heading textColor="#bbb" bold={false} margin="0 0 30px 0">Questions ?</Heading>
-            <Image src={images.questions} style={{ width: '500px' }} />
+            <Image src={images.questions.replace("/", "")} style={{ width: '500px' }} />
           </Slide>
           <Slide transition={["zoom", "fade"]} bgColor="primary">
             <Heading caps fit>Flexible Layouts</Heading>
