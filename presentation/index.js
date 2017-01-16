@@ -203,7 +203,7 @@ export default class Presentation extends React.Component {
             <List>
               <Appear><ListItem>2 plateformes</ListItem></Appear>
               <Appear><ListItem>2 langages différents</ListItem></Appear>
-              <Appear><ListItem>2 pattern design/convertions différentes</ListItem></Appear>
+              <Appear><ListItem>2 patterns design/conventions différentes</ListItem></Appear>
               <Appear><ListItem>2 fois plus de temps à coder</ListItem></Appear>
             </List>
           </Slide>
