@@ -48,7 +48,7 @@ const images = {
   ababol: require("../assets/photos/ababol.jpg"),
   ilyes: require("../assets/photos/ilyes.jpg"),
   flg: require("../assets/photos/flg.jpg"),
-  efounders: require("../assets/logos/efounders.svg"),
+  efoundersLogo: require("../assets/logos/efounders.svg"),
   spendesk: require("../assets/logos/spendesk.svg"),
   fbWeb: require("../assets/fb-1.jpg"),
   fbNew: require("../assets/fb2017.jpg"),
@@ -61,6 +61,7 @@ const images = {
   firstname: require("../assets/code/firstname.png"),
   fullname: require("../assets/code/fullname.png"),
   hiring: require("../assets/hiring.gif"),
+  efounders: require("../assets/efounders.png"),
 };
 
 preloader(images);
@@ -146,45 +147,64 @@ export default class Presentation extends React.Component {
           </Slide>
           <Slide transition={["slide"]} bgColor="white">
             <Layout>
-              <Appear fid="0">
-                <Fill>
+              <Appear>
+                <Fit>
                   <Image bgImage={images.flg.replace("/", "")} style={Styles.avatar}/>
-                  <Image src={images.efounders} style={Styles.logos}  />
+                  <Image src={images.efoundersLogo} style={Styles.logos}  />
                   <List style={Styles.list}>
-                    <ListItem textColor="tertiary" className="u-tc">
-                      <Link href="https://www.linkedin.com/in/fannylegallou" target="_blank" style={{fontSize: '0.8em'}}>
-                        <i className="fa fa-linkedin"/> @flg
+                    <ListItem textColor="tertiary">
+                      <Link href="https://www.linkedin.com/in/fannylegallou" target="_blank" style={{fontSize: '0.5em'}}>
+                        <i className="fa fa-linkedin" style={{color: purple}}/> @flg
                       </Link>
                     </ListItem>
                   </List>
+                </Fit>
+              </Appear>
+              <Appear>
+                <Fill>
+                  <Image src={images.efounders.replace("/", "")} height="220" style={{display: 'flex', alignItems: 'center'}} />
                 </Fill>
               </Appear>
-              <Appear fid="1">
+            </Layout>
+          </Slide>
+          <Slide transition={["slide"]} bgColor="white">
+            <Layout>
+              <Appear>
                 <Fill>
                   <Image bgImage={images.ababol.replace("/", "")} style={Styles.avatar}/>
-                  <Image src={images.spendesk} style={Styles.logos}  />
+                  <Image src={images.spendesk} style={Styles.logos} />
                   <List style={Styles.list}>
-                    <ListItem textColor="tertiary" className="u-tc">
-                      <Link href="https://github.com/ababol" target="_blank" style={{fontSize: '0.8em'}}>
-                        <i className="fa fa-github"/> @ababol
+                    <ListItem textColor="tertiary">
+                      <Link href="mailto:arnaud@spendesk.com" style={{fontSize: '0.5em'}}>
+                        <i className="fa fa-envelope-o" style={{color: purple}}/> arnaud@spendesk.com
+                      </Link>
+                    </ListItem>
+                    <ListItem textColor="tertiary">
+                      <Link href="https://github.com/ababol" target="_blank" style={{fontSize: '0.5em'}}>
+                        <i className="fa fa-github" style={{color: purple}}/> @ababol
                       </Link>
                     </ListItem>
                   </List>
                 </Fill>
               </Appear>
-              <Appear fid="2">
+              <Appear>
                 <Fill>
                   <Image bgImage={images.ilyes.replace("/", "")} style={Styles.avatar}/>
                   <Image src={images.spendesk} style={Styles.logos} />
-                  <List style={Styles.list} className="u-tc">
+                  <List style={Styles.list}>
                     <ListItem textColor="tertiary">
-                      <Link href="https://github.com/ilyes" target="_blank" style={{fontSize: '0.8em'}}>
-                        <i className="fa fa-github"/> @ilyes
+                      <Link href="mailto:ilyes@spendesk.com" style={{fontSize: '0.5em'}}>
+                        <i className="fa fa-envelope-o" style={{color: purple}}/> ilyes@spendesk.com
                       </Link>
                     </ListItem>
                     <ListItem textColor="tertiary">
-                      <Link href="https://github.com/js-and-chill" target="_blank" style={{fontSize: '0.8em'}}>
-                        <i className="fa fa-github"/> @js-and-chill
+                      <Link href="https://github.com/ilyes" target="_blank" style={{fontSize: '0.5em'}}>
+                        <i className="fa fa-github" style={{color: purple}}/> @ilyes
+                      </Link>
+                    </ListItem>
+                    <ListItem textColor="tertiary">
+                      <Link href="https://github.com/js-and-chill" target="_blank" style={{fontSize: '0.5em'}}>
+                        <i className="fa fa-github" style={{color: purple}}/> @js-and-chill
                       </Link>
                     </ListItem>
                   </List>
@@ -292,13 +312,13 @@ export default class Presentation extends React.Component {
           </Slide>
           <Slide transition={["slide"]} bgColor="white">
             <Heading textColor={black} bold={false} margin="0 0 30px 0">Questions <Purple>?</Purple></Heading>
-            <Image src={images.questions.replace("/", "")} style={{ width: '500px' }} />
-            <Link href="https://spendesk.github.io/hipster-2018/">https://spendesk.github.io/hipster-2018/</Link>
+            <Image src={images.questions.replace("/", "")} style={{ width: '500px' }} /><br/>
+            <span style={{fontSize: '0.8em'}}>Slides: </span><Link href="https://spendesk.github.io/hipster-2018/" style={{fontSize: '0.8em'}}>https://<Purple>spendesk.github.io</Purple>/hipster-2018</Link>
           </Slide>
           <Slide transition={["slide"]} bgColor="white">
             <Heading textColor={black} bold={false} margin="0 0 30px 0">On <Purple>recrute</Purple>!</Heading>
             <Image src={images.hiring.replace("/", "")} width={480} margin="0 auto" /><br/>
-            Contact: <Link href="mailto:arnaud@spendesk.com"><Purple>arnaud@spendesk.com</Purple></Link>
+            Contact: <Link href="mailto:dev@spendesk.com">dev<Purple>@spendesk.com</Purple></Link>
           </Slide>
         </Deck>
       </Spectacle>

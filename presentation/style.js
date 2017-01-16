@@ -2,6 +2,8 @@ export default {
   list: {
     listStyle: 'none',
     margin: 0,
+    display: 'inline-block',
+    margin: '0 auto',
   },
   avatar: {
     width: 160,
