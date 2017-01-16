@@ -114,7 +114,7 @@ export default class Presentation extends React.Component {
   componentDidMount() {
     init(`#typedHome`, {
       // required - for now, only accepting texts
-        strings: ['React-Native', 'GraphQL', 'Relay'],
+        strings: ['React Native', 'GraphQL', 'Relay'],
         //optional
         typeSpeed: 55, //default
         //optional
@@ -194,7 +194,7 @@ export default class Presentation extends React.Component {
           </Slide>
           <Slide transition={["slide"]} bgColor="white">
             <Heading fit size={4} bold={false} textColor="tertiary">
-              React-Native: <Purple>Pourquoi ?</Purple>
+              React Native: <Purple>Pourquoi ?</Purple>
             </Heading>
             <Image src={images.why.replace("/", "")} margin="30px 0 0 0" />
           </Slide>
@@ -238,7 +238,7 @@ export default class Presentation extends React.Component {
             <Appear><Image src={images.fbNew.replace("/", "")} height={450} /></Appear>
           </Slide>
           <Slide transition={["slide"]} bgColor="white">
-            <Heading textColor={black} bold={false} textSize="3.5rem" margin="0 0 30px">Solution 2 - <Appear fid="0"><Purple>React-Native</Purple></Appear></Heading>
+            <Heading textColor={black} bold={false} textSize="3.5rem" margin="0 0 30px">Solution 2 - <Appear fid="0"><Purple>React Native</Purple></Appear></Heading>
             <Appear fid="0"><Image src={images.firework.replace("/", "")} width={300} margin="0 auto" /></Appear>
             <List>
               <Appear><ListItem>Rapidité/agilité/flexibilité du web</ListItem></Appear>
@@ -246,7 +246,7 @@ export default class Presentation extends React.Component {
             </List>
           </Slide>
           <Slide bgColor="white">
-            <Heading textColor={black} bold={false} textSize="3.5rem" margin="0 0 30px"><Purple>React-Native</Purple> en 2017</Heading>
+            <Heading textColor={black} bold={false} textSize="3.5rem" margin="0 0 30px"><Purple>React Native</Purple> en 2017</Heading>
             <Appear>
               <div>
                 <Image src={images.appRn.replace("/", "")} width={400} /><br/>
@@ -262,7 +262,7 @@ export default class Presentation extends React.Component {
             <Heading textColor="#bbb" bold={false} fit><Purple>Ce que nous allons construire</Purple></Heading>
           </Slide>
           <Slide transition={["slide"]} bgColor="white">
-            <Heading textColor={black} bold={false} textSize="3.5rem" margin="0 0 30px">React-Native chez <Purple>Spendesk</Purple></Heading>
+            <Heading textColor={black} bold={false} textSize="3.5rem" margin="0 0 30px">React Native chez <Purple>Spendesk</Purple></Heading>
             <Image src={images.spendeskMobile.replace("/", "")} height={450} />
           </Slide>
           <Slide transition={["slide"]} bgColor="white">
