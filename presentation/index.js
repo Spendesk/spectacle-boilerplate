@@ -223,8 +223,8 @@ export default class Presentation extends React.Component {
             <List>
               <Appear><ListItem>2 plateformes</ListItem></Appear>
               <Appear><ListItem>2 langages différents</ListItem></Appear>
-              <Appear><ListItem>2 patterns design/conventions différentes</ListItem></Appear>
-              <Appear><ListItem>2 fois plus de temps à coder</ListItem></Appear>
+              <Appear><ListItem>2 patterns design différents</ListItem></Appear>
+              <Appear><ListItem>2 fois plus de temps</ListItem></Appear>
             </List>
           </Slide>
           <Slide transition={["slide"]} bgColor="white" notes="buggy and slow, garnering one-star ratings in the App Store and crashing more often than it worked.">
@@ -261,8 +261,8 @@ export default class Presentation extends React.Component {
             <Heading textColor={black} bold={false} textSize="3.5rem" margin="0 0 30px">Solution 2 - <Appear fid="0"><Purple>React Native</Purple></Appear></Heading>
             <Appear fid="0"><Image src={images.firework.replace("/", "")} width={300} margin="0 auto" /></Appear>
             <List>
-              <Appear><ListItem>Rapidité/agilité/flexibilité du web</ListItem></Appear>
-              <Appear><ListItem>Un langage bridge</ListItem></Appear>
+              <Appear><ListItem>Rapidité/agilité/flexibilité</ListItem></Appear>
+              <Appear><ListItem>Un framework bridge</ListItem></Appear>
             </List>
           </Slide>
           <Slide bgColor="white">
