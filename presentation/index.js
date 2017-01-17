@@ -162,7 +162,7 @@ export default class Presentation extends React.Component {
               </Appear>
               <Appear>
                 <Fill>
-                  <Image src={images.efounders.replace("/", "")} height="220" style={{display: 'flex', alignItems: 'center'}} />
+                  <Image src={images.efounders.replace("/", "")} height="404" style={{display: 'flex', alignItems: 'center'}} />
                 </Fill>
               </Appear>
             </Layout>
