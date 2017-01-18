@@ -247,18 +247,20 @@ export default class Presentation extends React.Component {
             </Layout>
           </Slide>
           <Slide transition={["slide"]} bgColor="white">
-            <Heading textColor={black} bold={false} textSize="3.5rem" margin="0 0 30px">Problèmes <Purple>solution web</Purple></Heading>
+            <Heading textColor={black} bold={false} textSize="3.5rem" margin="0 0 30px">Problèmes <Purple>full web</Purple></Heading>
             <List>
               <Appear><ListItem>Performances et optimisation</ListItem></Appear>
               <Appear><ListItem>Sensations</ListItem></Appear>
             </List>
           </Slide>
           <Slide transition={["slide"]} bgColor="white">
-            <Heading textColor={black} bold={false} textSize="3.5rem" margin="0 0 30px">L'application <Purple>full native</Purple></Heading>
+            <Heading textColor={purple} bold={false} textSize="3.5rem" margin="0">Solution 2</Heading>
+            <Appear><Text>Application native</Text></Appear>
             <Appear><Image src={images.fbNew.replace("/", "")} height={450} /></Appear>
           </Slide>
           <Slide transition={["slide"]} bgColor="white">
-            <Heading textColor={black} bold={false} textSize="3.5rem" margin="0 0 30px">Solution 2 - <Appear fid="0"><Purple>React Native</Purple></Appear></Heading>
+            <Heading textColor={purple} bold={false} textSize="3.5rem" margin="0">Solution 3</Heading>
+            <Appear><Text>React Native</Text></Appear>
             <Appear fid="0"><Image src={images.firework.replace("/", "")} width={300} margin="0 auto" /></Appear>
             <List>
               <Appear><ListItem>Rapidité/agilité/flexibilité</ListItem></Appear>
@@ -316,9 +318,10 @@ export default class Presentation extends React.Component {
             <span style={{fontSize: '0.8em'}}>Slides: </span><Link href="https://spendesk.github.io/hipster-2018/" style={{fontSize: '0.8em'}}>https://<Purple>spendesk.github.io</Purple>/hipster-2018</Link>
           </Slide>
           <Slide transition={["slide"]} bgColor="white">
-            <Heading textColor={black} bold={false} margin="0 0 30px 0">On <Purple>recrute</Purple>!</Heading>
+            <Heading textColor={black} bold={false} margin="0 0 30px 0">On <Purple>recrute</Purple> !</Heading>
             <Image src={images.hiring.replace("/", "")} width={480} margin="0 auto" /><br/>
-            Contact: <Link href="mailto:dev@spendesk.com">dev<Purple>@spendesk.com</Purple></Link>
+            <Link href="mailto:dev@spendesk.com">dev<Purple>@spendesk.com</Purple></Link><br/>
+            <Link href="mailto:fanny@e-founders.com">fanny<Purple>@e-founders.com</Purple></Link>
           </Slide>
         </Deck>
       </Spectacle>
