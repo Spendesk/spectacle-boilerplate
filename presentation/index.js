@@ -62,6 +62,8 @@ const images = {
   fullname: require("../assets/code/fullname.png"),
   hiring: require("../assets/hiring.gif"),
   efounders: require("../assets/efounders.png"),
+  screen1: require("../assets/screen-1.png"),
+  screen2: require("../assets/screen-2.png"),
 };
 
 preloader(images);
@@ -199,7 +201,7 @@ export default class Presentation extends React.Component {
                     </ListItem>
                     <ListItem textColor="tertiary">
                       <Link href="https://github.com/ilyes" target="_blank" style={{fontSize: '0.5em'}}>
-                        <i className="fa fa-github" style={{color: purple}}/> @ilyes
+                        <i className="fa fa-github" style={{color: purple}}/> @yachaka
                       </Link>
                     </ListItem>
                     <ListItem textColor="tertiary">
@@ -276,10 +278,9 @@ export default class Presentation extends React.Component {
             <Appear><Text><i className="fa fa-github"/> 42832 <i className="fa fa-star"/></Text></Appear>
           </Slide>
           <Slide transition={["slide"]} bgColor="white">
-            <Heading textColor={black} bold={false} fit>En pratique <Purple>construisons une Todo List</Purple></Heading>
-          </Slide>
-          <Slide transition={["slide"]} bgColor="white">
-            <Heading textColor="#bbb" bold={false} fit><Purple>Ce que nous allons construire</Purple></Heading>
+            <Heading textColor={black} bold={false} fit margin="0 0 40px 0">En pratique <Purple>construisons une Todo List</Purple></Heading>
+            <Image style={{ height: 550, float: 'left', border: '1px solid black' }} margin="0 20px 0 0" src={images.screen1.replace("/", "")}  />
+            <Image style={{ height: 550, border: '1px solid black' }} src={images.screen2.replace("/", "")} />
           </Slide>
           <Slide transition={["slide"]} bgColor="white">
             <Heading textColor={black} bold={false} textSize="3.5rem" margin="0 0 30px">React Native chez <Purple>Spendesk</Purple></Heading>
