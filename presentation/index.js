@@ -57,7 +57,7 @@ const images = {
   questions: require("../assets/questions.gif"),
   appRn: require("../assets/app_rn.png"),
   spendeskMobile: require("../assets/spendesk_mobile.png"),
-  graphql: require("file!../assets/graphql.mov"),
+  // graphql: require("file!../assets/graphql.mov"),
   firstname: require("../assets/code/firstname.png"),
   fullname: require("../assets/code/fullname.png"),
   hiring: require("../assets/hiring.gif"),
@@ -173,24 +173,6 @@ export default class Presentation extends React.Component {
             <Layout>
               <Appear>
                 <Fill>
-                  <Image bgImage={images.ababol.replace("/", "")} style={Styles.avatar}/>
-                  <Image src={images.spendesk} style={Styles.logos} />
-                  <List style={Styles.list}>
-                    <ListItem textColor="tertiary">
-                      <Link href="mailto:arnaud@spendesk.com" style={{fontSize: '0.5em'}}>
-                        <i className="fa fa-envelope-o" style={{color: purple}}/> arnaud@spendesk.com
-                      </Link>
-                    </ListItem>
-                    <ListItem textColor="tertiary">
-                      <Link href="https://github.com/ababol" target="_blank" style={{fontSize: '0.5em'}}>
-                        <i className="fa fa-github" style={{color: purple}}/> @ababol
-                      </Link>
-                    </ListItem>
-                  </List>
-                </Fill>
-              </Appear>
-              <Appear>
-                <Fill>
                   <Image bgImage={images.ilyes.replace("/", "")} style={Styles.avatar}/>
                   <Image src={images.spendesk} style={Styles.logos} />
                   <List style={Styles.list}>
@@ -207,6 +189,24 @@ export default class Presentation extends React.Component {
                     <ListItem textColor="tertiary">
                       <Link href="https://github.com/js-and-chill" target="_blank" style={{fontSize: '0.5em'}}>
                         <i className="fa fa-github" style={{color: purple}}/> @js-and-chill
+                      </Link>
+                    </ListItem>
+                  </List>
+                </Fill>
+              </Appear>
+              <Appear>
+                <Fill>
+                  <Image bgImage={images.ababol.replace("/", "")} style={Styles.avatar}/>
+                  <Image src={images.spendesk} style={Styles.logos} />
+                  <List style={Styles.list}>
+                    <ListItem textColor="tertiary">
+                      <Link href="mailto:arnaud@spendesk.com" style={{fontSize: '0.5em'}}>
+                        <i className="fa fa-envelope-o" style={{color: purple}}/> arnaud@spendesk.com
+                      </Link>
+                    </ListItem>
+                    <ListItem textColor="tertiary">
+                      <Link href="https://github.com/ababol" target="_blank" style={{fontSize: '0.5em'}}>
+                        <i className="fa fa-github" style={{color: purple}}/> @ababol
                       </Link>
                     </ListItem>
                   </List>
@@ -296,7 +296,6 @@ export default class Presentation extends React.Component {
           </Slide>
           <Slide transition={["slide"]} bgColor="white">
             <Heading textColor={black} bold={false} textSize="3.5rem" margin="0 0 30px"><Purple>GraphQL</Purple>: A query language for your API</Heading>
-            <Appear><video src={images.graphql.replace("/", "")} height={450} autoPlay={true} loop={true} /></Appear>
           </Slide>
           <Slide transition={["slide"]} bgColor="white">
             <Heading textColor={black} bold={false} textSize="2.5rem" margin="0 0 30px"><Purple>Relay</Purple>: A JavaScript framework for building data-driven react applications</Heading>
@@ -327,7 +326,6 @@ export default class Presentation extends React.Component {
           <Slide transition={["slide"]} bgColor="white">
             <Heading textColor={black} bold={false} margin="0 0 30px 0">On <Purple>recrute</Purple> !</Heading>
             <Image src={images.hiring.replace("/", "")} width={480} margin="0 auto" /><br/>
-            <Link href="mailto:dev@spendesk.com">dev<Purple>@spendesk.com</Purple></Link><br/>
             <Link href="mailto:fanny@e-founders.com">fanny<Purple>@e-founders.com</Purple></Link>
           </Slide>
         </Deck>
