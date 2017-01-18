@@ -281,8 +281,14 @@ export default class Presentation extends React.Component {
           </Slide>
           <Slide transition={["slide"]} bgColor="white">
             <Heading textColor={black} bold={false} fit margin="0 0 40px 0">En pratique <Purple>construisons une Todo List</Purple></Heading>
-            <Appear><Image style={{ height: 550, float: 'left', border: '1px solid black' }} margin="0 20px 0 0" src={images.screen1.replace("/", "")}  /></Appear>
-            <Appear><Image style={{ height: 550, border: '1px solid black' }} src={images.screen2.replace("/", "")} /></Appear>
+            <Layout>
+              <Fill style={{marginRight: 10}}>
+                <Appear><Image height={550} style={{ border: '1px solid black' }} margin="0 20px 0 0" src={images.screen1.replace("/", "")}  /></Appear>
+              </Fill>
+              <Fill style={{marginRight: 10}}>
+                <Appear><Image height={550} style={{ border: '1px solid black' }} src={images.screen2.replace("/", "")} /></Appear>
+              </Fill>
+            </Layout>
           </Slide>
           <Slide transition={["slide"]} bgColor="white">
             <Heading textColor={black} bold={false} textSize="3.5rem" margin="0 0 30px">React Native chez <Purple>Spendesk</Purple></Heading>
